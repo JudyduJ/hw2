@@ -147,7 +147,7 @@ for epoch in range(NUM_EPOCHS):
         mean_test_accuracy = np.mean(test_Accuracy)
         test_mean_loss = np.sum(test_loss_total) / X_test.shape[0]
         graph_df.loc[epoch, ['Epoch','Test_Loss' 'Test_Accuracy']] = [epoch + 1,test_mean_loss, mean_test_accuracy]
-  print('Number of Epoch = {} - Average test cross entropy:= {}'.format(epoch + 1, np.sum(loss_total) / X_train.shape[0]))
+  print('Number of Epoch = {} - Average test cross entropy:= {}'.format(epoch + 1, np.sum(test_loss_total) / X_train.shape[0]))
 
 time_taken = time.time() - time_start
 
