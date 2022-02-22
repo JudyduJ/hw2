@@ -89,7 +89,7 @@ class MLP(object):
     backward pass
     """
     lr = tf.compat.v1.train.exponential_decay(
-        0.1,
+        0.01,
         0,
         number_of_train_examples/20, 0.99,
         staircase=True)
