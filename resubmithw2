@@ -93,7 +93,7 @@ class MLP(object):
         0,
         number_of_train_examples/20, 0.99,
         staircase=True)
-    optimizer = tf.keras.optimizers.SGD(lr=1e-4)
+    optimizer = tf.keras.optimizers.SGD(lr)
     with tf.GradientTape() as tape:
       predicted = self.forward(X_train)
       current_loss = self.loss(predicted, y_train)
